@@ -4,6 +4,8 @@ import connectDB from "./lib/db.js";
 import path from "path"
 import cors from "cors"
 import {serve} from "inngest/express"
+import {inngest,functions} from "./lib/inngest.js"
+
 
 const app=express();
 
@@ -33,4 +35,13 @@ if(ENV.NODE_ENV==="production"){
 
 }
 
-app.listen(ENV.PORT,()=>console.log(`server running on port ${ENV.PORT}`));
+const startServer = async () => {
+  try {
+    await connectDB();
+    app.listen(ENV.PORT, () => console.log("Server is running on port:", ENV.PORT));
+  } catch (error) {
+    console.error("💥 Error starting the server", error);
+  }
+};
+
+startServer();
