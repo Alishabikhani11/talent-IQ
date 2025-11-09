@@ -1,4 +1,5 @@
 import { getDifficultyBadgeClass } from "../lib/utils";
+
 function ProblemDescription({ problem, currentProblemId, onProblemChange, allProblems }) {
   return (
     <div className="h-full overflow-y-auto bg-base-200">
