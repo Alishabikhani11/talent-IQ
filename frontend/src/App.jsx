@@ -4,7 +4,7 @@ import HomePage from "./pages/HomePage";
 
 import { Toaster } from "react-hot-toast";
 import DashBoardPage from "./pages/DashBoardPage";
-import ProblemPage from "./pages/ProblemPage";
+import ProblemPage from "./pages/problemPage";
 import ProblemsPage from "./pages/ProblemsPage";
 import SessionPage from "./pages/SessionPage";
 
